@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Phone Vape</title>
+  <title>Privacy Policy – Glow Bar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -126,34 +126,79 @@
 
     .policy {
       margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy:last-of-type {
+      border-bottom: none;
+    }
+
+    .policy-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .policy-num {
+      font-family: 'Geist Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      padding: 4px 8px;
+      border-radius: 4px;
     }
 
     .policy h2 {
       font-size: 15px;
       font-weight: 600;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .policy h2::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      background: var(--border-hover);
-      border-radius: 50%;
     }
 
     .policy p {
       color: var(--text-secondary);
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.7;
+      padding-left: 52px;
+    }
+
+    .policy p + p {
+      margin-top: 12px;
+    }
+
+    .policy ul {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.7;
+      padding-left: 72px;
+      margin-top: 12px;
+      list-style: none;
+    }
+
+    .policy ul li {
+      position: relative;
       padding-left: 16px;
     }
 
+    .policy ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 4px;
+      height: 4px;
+      background: var(--border-hover);
+      border-radius: 50%;
+    }
+
+    .policy ul li + li {
+      margin-top: 6px;
+    }
+
     .contact-section {
-      margin-top: 64px;
+      margin-top: 32px;
       padding: 24px;
       background: var(--bg-subtle);
       border: 1px solid var(--border);
@@ -235,6 +280,15 @@
         font-size: 26px;
       }
 
+      .policy p {
+        padding-left: 0;
+        margin-top: 8px;
+      }
+
+      .policy ul {
+        padding-left: 20px;
+      }
+
       .contact-section {
         padding: 20px;
       }
@@ -244,7 +298,7 @@
 <body>
   <nav>
     <div class="nav-inner">
-      <a href="index.html" class="logo">Phone Vape</a>
+      <a href="index.html" class="logo">Glow Bar</a>
       <div class="nav-links">
         <a href="index.html">Support</a>
         <a href="terms.html">Terms</a>
@@ -256,44 +310,62 @@
   <main>
     <div class="hero">
       <h1>Privacy Policy</h1>
-      <p class="meta">Last updated: December 26, 2025</p>
+      <p class="meta">Last updated: December 27, 2025</p>
     </div>
 
-    <p class="intro">Phone Vape is a novelty application created for entertainment purposes only.</p>
+    <p class="intro">Your privacy is important. This Privacy Policy explains how Glow Bar handles user information.</p>
 
     <div class="policy">
-      <h2>Data Collection</h2>
-      <p>Phone Vape does not collect, store, transmit, or share any personal data.</p>
-    </div>
-
-    <div class="policy">
-      <h2>Microphone Access</h2>
-      <p>Phone Vape may request access to the device microphone solely to detect breath sounds for triggering visual and haptic animations. All audio is processed entirely on-device and is never recorded, stored, or transmitted.</p>
-    </div>
-
-    <div class="policy">
-      <h2>Device Sensors</h2>
-      <p>Phone Vape may use device motion sensors or system volume changes to enable interactive effects. This information is used only in real time and is not stored or shared.</p>
-    </div>
-
-    <div class="policy">
-      <h2>Third Parties</h2>
-      <p>Phone Vape does not use third-party analytics, advertising SDKs, tracking technologies, or external services.</p>
+      <div class="policy-header">
+        <span class="policy-num">01</span>
+        <h2>Information We Collect</h2>
+      </div>
+      <p>Glow Bar does not collect, store, transmit, or share any personal data.</p>
+      <p>Specifically:</p>
+      <ul>
+        <li>No account creation</li>
+        <li>No personal identifiers</li>
+        <li>No analytics</li>
+        <li>No tracking</li>
+        <li>No third-party SDKs that collect user data</li>
+      </ul>
     </div>
 
     <div class="policy">
-      <h2>Children</h2>
-      <p>Phone Vape is not intended for children and does not knowingly collect data from anyone under the age of 13.</p>
+      <div class="policy-header">
+        <span class="policy-num">02</span>
+        <h2>Device Permissions</h2>
+      </div>
+      <p>Glow Bar may access system features such as audio output or haptic feedback solely to provide the interactive experience. These features are used locally on the device and no data is transmitted or recorded.</p>
     </div>
 
     <div class="policy">
-      <h2>Changes</h2>
-      <p>This Privacy Policy may be updated from time to time. Any changes will be reflected on this page.</p>
+      <div class="policy-header">
+        <span class="policy-num">03</span>
+        <h2>Data Sharing</h2>
+      </div>
+      <p>Glow Bar does not share data with third parties.</p>
+    </div>
+
+    <div class="policy">
+      <div class="policy-header">
+        <span class="policy-num">04</span>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>Glow Bar does not knowingly collect any information from children. Since no data collection occurs, no personal information is stored.</p>
+    </div>
+
+    <div class="policy">
+      <div class="policy-header">
+        <span class="policy-num">05</span>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>This Privacy Policy may be updated occasionally. Any changes will be reflected with an updated date.</p>
     </div>
 
     <div class="contact-section">
       <h2>Contact</h2>
-      <p>If you have questions about this Privacy Policy, you may contact the developer at:</p>
+      <p>If you have questions about this Privacy Policy, contact:</p>
       <a href="mailto:poemkillerlabs@gmail.com" class="contact-link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         poemkillerlabs@gmail.com

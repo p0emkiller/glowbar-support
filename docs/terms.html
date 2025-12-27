@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms & Conditions – Phone Vape</title>
+  <title>Terms & Conditions – Glow Bar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -126,13 +126,19 @@
 
     .term {
       margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .term:last-of-type {
+      border-bottom: none;
     }
 
     .term-header {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .term-num {
@@ -154,8 +160,57 @@
     .term p {
       color: var(--text-secondary);
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.7;
       padding-left: 52px;
+    }
+
+    .term p + p {
+      margin-top: 12px;
+    }
+
+    .contact-section {
+      margin-top: 32px;
+      padding: 24px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .contact-section h2 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .contact-section p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .contact-link:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-subtle);
+    }
+
+    .contact-link svg {
+      width: 14px;
+      height: 14px;
+      color: var(--text-muted);
     }
 
     footer {
@@ -200,13 +255,17 @@
         padding-left: 0;
         margin-top: 8px;
       }
+
+      .contact-section {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
     <div class="nav-inner">
-      <a href="index.html" class="logo">Phone Vape</a>
+      <a href="index.html" class="logo">Glow Bar</a>
       <div class="nav-links">
         <a href="index.html">Support</a>
         <a href="terms.html" class="active">Terms</a>
@@ -218,49 +277,52 @@
   <main>
     <div class="hero">
       <h1>Terms & Conditions</h1>
-      <p class="meta">Last updated: December 26, 2025</p>
+      <p class="meta">Last updated: December 27, 2025</p>
     </div>
 
-    <p class="intro">By downloading or using Phone Vape, you agree to the following terms.</p>
+    <p class="intro">By downloading or using Glow Bar ("the App"), you agree to the following terms. If you do not agree to these terms, please do not use the App.</p>
 
     <div class="term">
       <div class="term-header">
         <span class="term-num">01</span>
-        <h2>Novelty App Disclaimer</h2>
+        <h2>Description of the App</h2>
       </div>
-      <p>Phone Vape is a novelty and entertainment application only. It does not simulate, promote, or encourage real-world vaping, smoking, or nicotine use.</p>
+      <p>Glow Bar is an abstract, interactive toy intended purely for entertainment purposes. The App provides a visual and audio response to user input and does not simulate, promote, or represent any real-world products, substances, or activities.</p>
+      <p>Glow Bar is not associated with, endorsed by, or affiliated with any vaping, tobacco, nicotine, or e-cigarette products or companies, including but not limited to Geek Bar.</p>
     </div>
 
     <div class="term">
       <div class="term-header">
         <span class="term-num">02</span>
-        <h2>No Health Claims</h2>
+        <h2>No Medical or Health Claims</h2>
       </div>
-      <p>Phone Vape makes no health, medical, or lifestyle claims of any kind. It is not a cessation tool, replacement product, or wellness application.</p>
+      <p>Glow Bar does not provide medical, health, or wellness advice and should not be used for diagnostic, therapeutic, or treatment purposes.</p>
+      <p>The App does not claim to influence physical health, habits, or behaviors.</p>
     </div>
 
     <div class="term">
       <div class="term-header">
         <span class="term-num">03</span>
-        <h2>No Association</h2>
+        <h2>User Responsibility</h2>
       </div>
-      <p>Phone Vape is not affiliated with, endorsed by, sponsored by, or associated with Geek Bar or any other vape, e-cigarette, or nicotine-related brand. All brand names referenced are the property of their respective owners.</p>
+      <p>You agree to use the App for lawful purposes only. You acknowledge that your use of the App is voluntary and at your own discretion.</p>
+      <p>The App does not require physical exertion, ingestion, or interaction with real-world objects.</p>
     </div>
 
     <div class="term">
       <div class="term-header">
         <span class="term-num">04</span>
-        <h2>Use at Your Own Discretion</h2>
+        <h2>Intellectual Property</h2>
       </div>
-      <p>You use Phone Vape voluntarily and at your own discretion. The developer is not responsible for how the app is interpreted or used.</p>
+      <p>All content, design, and code within Glow Bar are the property of the developer unless otherwise stated. You may not copy, distribute, or modify the App without permission.</p>
     </div>
 
     <div class="term">
       <div class="term-header">
         <span class="term-num">05</span>
-        <h2>No Warranty</h2>
+        <h2>Disclaimer of Warranties</h2>
       </div>
-      <p>Phone Vape is provided "as is," without warranties of any kind, express or implied.</p>
+      <p>Glow Bar is provided "as is" and "as available," without warranties of any kind. The developer does not guarantee uninterrupted or error-free operation.</p>
     </div>
 
     <div class="term">
@@ -268,15 +330,24 @@
         <span class="term-num">06</span>
         <h2>Limitation of Liability</h2>
       </div>
-      <p>To the maximum extent permitted by law, the developer shall not be liable for any damages arising from the use of Phone Vape.</p>
+      <p>To the fullest extent permitted by law, the developer shall not be liable for any damages arising from the use or inability to use the App.</p>
     </div>
 
     <div class="term">
       <div class="term-header">
         <span class="term-num">07</span>
-        <h2>Changes</h2>
+        <h2>Changes to These Terms</h2>
       </div>
-      <p>These terms may be updated at any time. Continued use of the app constitutes acceptance of any changes.</p>
+      <p>These Terms may be updated from time to time. Continued use of the App constitutes acceptance of any changes.</p>
+    </div>
+
+    <div class="contact-section">
+      <h2>Contact</h2>
+      <p>For questions regarding these Terms, please contact:</p>
+      <a href="mailto:poemkillerlabs@gmail.com" class="contact-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        poemkillerlabs@gmail.com
+      </a>
     </div>
   </main>
 
