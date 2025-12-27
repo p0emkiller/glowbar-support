@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – iVape</title>
+  <title>Privacy Policy – Phone Vape</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #0a0a0a;
-      --bg-card: #141414;
-      --bg-card-hover: #1a1a1a;
-      --accent: #9cff57;
-      --accent-dim: rgba(156, 255, 87, 0.15);
-      --text-primary: #ffffff;
-      --text-secondary: rgba(255, 255, 255, 0.6);
-      --text-muted: rgba(255, 255, 255, 0.35);
-      --border: rgba(255, 255, 255, 0.08);
+      --bg: #09090b;
+      --bg-subtle: #18181b;
+      --border: #27272a;
+      --border-hover: #3f3f46;
+      --text: #fafafa;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent: #22c55e;
+      --radius: 8px;
     }
 
     * {
@@ -27,242 +27,224 @@
     }
 
     body {
-      font-family: 'Outfit', system-ui, -apple-system, sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
       line-height: 1.6;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .noise {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      opacity: 0.03;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    }
-
-    .glow {
-      position: fixed;
-      top: -50%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 800px;
-      height: 800px;
-      background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%);
-      pointer-events: none;
-      opacity: 0.4;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      background: rgba(10, 10, 10, 0.8);
+      background: rgba(9, 9, 11, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
-      max-width: 900px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 16px 24px;
+      padding: 0 24px;
+      height: 56px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
     }
 
     .logo {
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--accent);
-      text-decoration: none;
+      font-family: 'Geist Mono', monospace;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--text);
       letter-spacing: -0.02em;
     }
 
     .nav-links {
       display: flex;
-      gap: 8px;
+      gap: 4px;
     }
 
     .nav-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-size: 13px;
       font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: all 0.2s ease;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
     }
 
     .nav-links a:hover {
-      color: var(--text-primary);
-      background: var(--bg-card);
+      color: var(--text-secondary);
+      background: var(--bg-subtle);
     }
 
     .nav-links a.active {
-      color: var(--accent);
-      background: var(--accent-dim);
+      color: var(--text);
+      background: var(--bg-subtle);
     }
 
     main {
-      max-width: 900px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 80px 24px 120px;
-      position: relative;
+      padding: 64px 24px 96px;
     }
 
     .hero {
-      margin-bottom: 48px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 6vw, 3rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      margin-bottom: 12px;
-      background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero .updated {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    .intro {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
       margin-bottom: 48px;
       padding-bottom: 32px;
       border-bottom: 1px solid var(--border);
     }
 
-    .section {
-      margin-bottom: 40px;
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
     }
 
-    .section h2 {
-      font-size: 1.15rem;
+    .hero .meta {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-family: 'Geist Mono', monospace;
+    }
+
+    .intro {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin-bottom: 48px;
+    }
+
+    .policy {
+      margin-bottom: 32px;
+    }
+
+    .policy h2 {
+      font-size: 15px;
       font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
-    .section h2 .icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      background: var(--accent-dim);
-      border-radius: 8px;
-      font-size: 1rem;
+    .policy h2::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--border-hover);
+      border-radius: 50%;
     }
 
-    .section p {
+    .policy p {
       color: var(--text-secondary);
-      font-size: 1rem;
-      padding-left: 44px;
+      font-size: 14px;
+      line-height: 1.6;
+      padding-left: 16px;
     }
 
-    .contact-box {
-      margin-top: 48px;
-      padding: 32px;
-      background: var(--bg-card);
+    .contact-section {
+      margin-top: 64px;
+      padding: 24px;
+      background: var(--bg-subtle);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: var(--radius);
     }
 
-    .contact-box h2 {
-      font-size: 1.15rem;
+    .contact-section h2 {
+      font-size: 14px;
       font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
-    .contact-box p {
+    .contact-section p {
       color: var(--text-secondary);
+      font-size: 14px;
       margin-bottom: 16px;
     }
 
-    .contact-box a {
+    .contact-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: var(--accent);
-      text-decoration: none;
+      color: var(--text);
+      font-size: 13px;
       font-weight: 500;
-      transition: opacity 0.2s;
+      padding: 8px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: all 0.15s ease;
     }
 
-    .contact-box a:hover {
-      opacity: 0.8;
+    .contact-link:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-subtle);
+    }
+
+    .contact-link svg {
+      width: 14px;
+      height: 14px;
+      color: var(--text-muted);
     }
 
     footer {
       border-top: 1px solid var(--border);
-      padding: 32px 24px;
+      padding: 24px;
       text-align: center;
+    }
+
+    footer p {
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 12px;
     }
 
     footer a {
       color: var(--text-secondary);
-      text-decoration: none;
+      transition: color 0.15s ease;
     }
 
     footer a:hover {
-      color: var(--accent);
+      color: var(--text);
     }
 
     @media (max-width: 600px) {
       .nav-inner {
-        flex-direction: column;
-        gap: 16px;
-      }
-      
-      .nav-links {
-        width: 100%;
-        justify-content: center;
+        height: 48px;
       }
 
       .nav-links a {
-        padding: 8px 12px;
-        font-size: 0.85rem;
+        padding: 6px 10px;
+        font-size: 12px;
       }
 
       main {
         padding: 48px 20px 80px;
       }
 
-      .section p {
-        padding-left: 0;
-        margin-top: 8px;
+      .hero h1 {
+        font-size: 26px;
       }
 
-      .contact-box {
-        padding: 24px;
+      .contact-section {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="glow"></div>
-
   <nav>
     <div class="nav-inner">
-      <a href="index.html" class="logo">iVape</a>
+      <a href="index.html" class="logo">Phone Vape</a>
       <div class="nav-links">
         <a href="index.html">Support</a>
         <a href="terms.html">Terms</a>
@@ -274,47 +256,47 @@
   <main>
     <div class="hero">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: December 26, 2025</p>
+      <p class="meta">Last updated: December 26, 2025</p>
     </div>
 
-    <p class="intro">iVape is a novelty application created for entertainment purposes only.</p>
+    <p class="intro">Phone Vape is a novelty application created for entertainment purposes only.</p>
 
-    <div class="section">
-      <h2><span class="icon">📊</span> Data Collection</h2>
-      <p>iVape does not collect, store, transmit, or share any personal data.</p>
+    <div class="policy">
+      <h2>Data Collection</h2>
+      <p>Phone Vape does not collect, store, transmit, or share any personal data.</p>
     </div>
 
-    <div class="section">
-      <h2><span class="icon">🎤</span> Microphone Access</h2>
-      <p>iVape may request access to the device microphone solely to detect breath sounds for triggering visual and haptic animations. All audio is processed entirely on-device and is never recorded, stored, or transmitted.</p>
+    <div class="policy">
+      <h2>Microphone Access</h2>
+      <p>Phone Vape may request access to the device microphone solely to detect breath sounds for triggering visual and haptic animations. All audio is processed entirely on-device and is never recorded, stored, or transmitted.</p>
     </div>
 
-    <div class="section">
-      <h2><span class="icon">📱</span> Device Sensors</h2>
-      <p>iVape may use device motion sensors or system volume changes to enable interactive effects. This information is used only in real time and is not stored or shared.</p>
+    <div class="policy">
+      <h2>Device Sensors</h2>
+      <p>Phone Vape may use device motion sensors or system volume changes to enable interactive effects. This information is used only in real time and is not stored or shared.</p>
     </div>
 
-    <div class="section">
-      <h2><span class="icon">🔗</span> Third Parties</h2>
-      <p>iVape does not use third-party analytics, advertising SDKs, tracking technologies, or external services.</p>
+    <div class="policy">
+      <h2>Third Parties</h2>
+      <p>Phone Vape does not use third-party analytics, advertising SDKs, tracking technologies, or external services.</p>
     </div>
 
-    <div class="section">
-      <h2><span class="icon">👶</span> Children</h2>
-      <p>iVape is not intended for children and does not knowingly collect data from anyone under the age of 13.</p>
+    <div class="policy">
+      <h2>Children</h2>
+      <p>Phone Vape is not intended for children and does not knowingly collect data from anyone under the age of 13.</p>
     </div>
 
-    <div class="section">
-      <h2><span class="icon">🔄</span> Changes</h2>
+    <div class="policy">
+      <h2>Changes</h2>
       <p>This Privacy Policy may be updated from time to time. Any changes will be reflected on this page.</p>
     </div>
 
-    <div class="contact-box">
+    <div class="contact-section">
       <h2>Contact</h2>
       <p>If you have questions about this Privacy Policy, you may contact the developer at:</p>
-      <a href="mailto:poemkillerlabs@gmail.com">
-        <span>poemkillerlabs@gmail.com</span>
-        <span>→</span>
+      <a href="mailto:poemkillerlabs@gmail.com" class="contact-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        poemkillerlabs@gmail.com
       </a>
     </div>
   </main>
@@ -324,4 +306,3 @@
   </footer>
 </body>
 </html>
-
